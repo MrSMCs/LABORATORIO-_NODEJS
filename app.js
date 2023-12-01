@@ -30,7 +30,7 @@ http.createServer(function (req, res) {
     });
 
   } else if (req.url == '/' && req.method.toLowerCase() === 'get') {
-    // Respond to GET request at '/'
+    // '/'
     res.writeHead(200, { 'Content-Type': 'text/html' });
     res.write('<h1>Prueba IAW - Pagina principal_Samuel</h1>');
     res.write('<form action="/fileupload" method="post" enctype="multipart/form-data">');
@@ -39,7 +39,7 @@ http.createServer(function (req, res) {
     res.write('</form>');
     return res.end();
   } else if (req.url == '/samuel' && req.method.toLowerCase() === 'get') {
-    // Respond to GET request at '/samuel'
+    // '/samuel'
     res.writeHead(200, { 'Content-Type': 'text/html' });
     res.write("<h1>Prueba IAW - Pagina alterna_Samuel</h1>");
     res.write('<form action="/fileupload" method="post" enctype="multipart/form-data">');
@@ -48,7 +48,7 @@ http.createServer(function (req, res) {
     res.write('</form>');
     return res.end();
   } else {
-    // Handle other routes or methods
+    // 404
     res.writeHead(404, { 'Content-Type': 'text/plain' });
     res.end('Not Found');
   }
